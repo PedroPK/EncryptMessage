@@ -8,4 +8,10 @@ public class ValidationUtils {
 		}
 	}
 	
+	public static void validateParameter(Object pParameter, String pParameterName) {
+		if ( pParameter == null ) {
+			ExceptionUtils.throwIllegalArgumentException(pParameterName);
+		}
+	}
+	
 }

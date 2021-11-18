@@ -12,4 +12,8 @@ public class StringUtils {
 		return Base64.getEncoder().encodeToString(pEncryptedBytes);
 	}
 	
+	public static byte[] base64Decode( String pEncryptedMessage ) {
+		return Base64.getDecoder().decode(pEncryptedMessage);
+	}
+	
 }
