@@ -1,7 +1,5 @@
 package cripto;
 
-import static org.junit.Assert.*;
-
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -10,8 +8,8 @@ public class EncrypterAESTest {
 	@Test
 	public void testCriptografar() {
 		// Arrange
-		String key = "MinhaChaveSegura";
-		String message = "1111 2222 3333 4444";
+		String key = "MINHACHAVESEGURA";
+		String message = "1111222233334444";
 		EncrypterAES aes = new EncrypterAES(key);
 		
 		
@@ -21,7 +19,7 @@ public class EncrypterAESTest {
 		
 		// Assert
 		Assert.assertNotNull(encryptedMessage);
-		Assert.assertFalse(encryptedMessage.isBlank());
+		Assert.assertFalse(encryptedMessage.isEmpty());
 		System.out.println(encryptedMessage);
 	}
 

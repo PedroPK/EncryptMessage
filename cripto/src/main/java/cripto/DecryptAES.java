@@ -33,6 +33,9 @@ public class DecryptAES {
 							StringUtils.base64Decode( pEncryptedMessage )
 						);
 			
+			String decryptedMessage =
+				new String(decryptedBytes);
+			
 			return 
 				String.valueOf(decryptedBytes);
 				 

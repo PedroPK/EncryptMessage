@@ -5,7 +5,7 @@ import java.util.Base64;
 public class StringUtils {
 	
 	public static boolean isStringValid(String pChaveSecreta) {
-		return pChaveSecreta == null || pChaveSecreta.isBlank();
+		return pChaveSecreta == null || pChaveSecreta.isEmpty();
 	}
 	
 	public static String base64Encode( byte[] pEncryptedBytes ) {
