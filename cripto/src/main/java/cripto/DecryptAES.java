@@ -35,13 +35,18 @@ public class DecryptAES {
 			
 			String decryptedMessage =
 				new String(decryptedBytes);
+			//System.out.println("New String = " + decryptedMessage);
 			
-			return 
+			String valueDecryptedBytes = 
 				String.valueOf(decryptedBytes);
+			//System.out.println("Value Of = " + valueDecryptedBytes);
+			return decryptedMessage;
+				
 				 
 		} catch ( Exception e ) {
 			throw new RuntimeException("Fail to encrypt the message: " + e);
 		}
 	}
 
+	
 }
