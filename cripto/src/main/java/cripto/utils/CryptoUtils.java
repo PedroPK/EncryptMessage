@@ -7,16 +7,18 @@ import javax.crypto.Cipher;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
 
+import cripto.utils.enums.EncryptionAlgorithms;
+
 public class CryptoUtils {
 	
 	public static SecretKeySpec newSecretKeySpecAES(String pSecretKey) {
 		return new SecretKeySpec(
 				pSecretKey.getBytes(), 
-				ConstantUtils.ALGORITHM_AES);
+				EncryptionAlgorithms.AES.toString());
 	}
 	
 	public static Cipher getCipherAES() throws NoSuchAlgorithmException, NoSuchPaddingException {
-		Cipher cipher = Cipher.getInstance(ConstantUtils.ALGORITHM_AES);
+		Cipher cipher = Cipher.getInstance(EncryptionAlgorithms.AES.toString());
 		
 		return cipher;
 	}

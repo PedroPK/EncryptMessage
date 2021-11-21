@@ -22,7 +22,6 @@ public class DecryptAESTest {
 		Assert.assertNotNull(decryptedMessage);
 		Assert.assertFalse(decryptedMessage.isEmpty());
 		Assert.assertEquals(originalMessage, decryptedMessage);
-		System.out.println(decryptedMessage);
 	}
 
 }
